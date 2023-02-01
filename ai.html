@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <title>Mirror, Mirror</title>
+    <style>
+      body {
+        background-color: #FF8080;
+      }
+      #header {
+        background-color: #1c1d25;
+        color: white;
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 50px;
+        padding: 20px;
+      }
+      #button {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        background-color: lightblue;
+        border: 1px solid blue;
+        border-radius: 5px;
+        text-align: center;
+        cursor: pointer;
+      }
+      #image {
+        display: none;
+        margin: 20px auto;
+        width: 400px;
+        height: 400px;
+        animation: slidein 1s ease-in-out;
+      }
+      @keyframes slidein {
+        from {
+          transform: translateX(100%);
+        }
+        to {
+          transform: translateX(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header">Mirror, Mirror, on my html page, who's the fairest of them all?</div>
+    <button id="button">Show Image</button>
+    <img id="image" src="src/images/lightfoot.jpg" style="border-radius: 5%;">
+  </body>
+  <script>
+    document.getElementById("button").addEventListener("click", function() {
+      document.getElementById("image").style.display = "block";
+    });
+  </script>
+</html>
